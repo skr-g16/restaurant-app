@@ -1,12 +1,7 @@
 import "regenerator-runtime"; /* for async await transpile */
 import "../styles/main.css";
-const burger = document.getElementById("burger");
-const navLinks = document.querySelector(".nav-links");
+import "../styles/responsive.css";
+import "./render-data.js";
 
-burger.addEventListener("change", () => {
-  if (burger.checked) {
-    navLinks.classList.add("open");
-  } else {
-    navLinks.classList.remove("open");
-  }
-});
+import toggleBurger from "./toggle-burger.js";
+toggleBurger();
