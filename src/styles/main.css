@@ -16,22 +16,100 @@
   width: 100%;
   height: 7em;
   position: fixed;
+  z-index: 99999;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10;
   transition: all 0.4s cubic-bezier(.25, .8, .25, 1);
 }
 
-ul {
+.nav-links {
   display: flex;
   list-style: none;
-  gap: 6rem;
-  font-size: larger;
+  gap: 9rem;
+  font-size: 1.3em;
+  font-weight: 500;
+
 }
 
-li a {
+.nav-links li a {
   text-decoration: none;
-  color: #000;
-  color: aliceblue;
+  color: white;
+  transition: ease-in-out 0.2s;
+}
+
+.nav-links li a:hover {
+  text-decoration: none;
+  color: #f23b26;
+}
+
+.logo {
+  width: 90px;
+  cursor: pointer;
+}
+
+/* burger */
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked~span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked~span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked~span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
 }
 
 .hero-container {
@@ -44,58 +122,19 @@ li a {
   text-align: center;
 }
 
-.logo {
-  width: 90px;
-  margin: 0
-}
-
-.hero-image {
-  display: block;
-  width: 100%;
-}
-
 .hero-content {
   position: absolute;
   color: rgb(249, 37, 37);
   z-index: 2;
-  /* Agar teks berada di atas gambar */
 }
 
-
-
-.hamburger {
-  display: none;
-}
-
-/* img {
-  display: block;
-} */
-@media screen and (min-width: 1200px) {
-  .hero-container {
-    object-fit: cover;
-  }
-
-  .hero-image {
+/* mobile */
+@media screen and (max-width: 768px) {
+  .burger {
     display: block;
-    width: 1000px;
-    margin: 0 auto;
   }
 
-}
-
-@media screen and (max-width: 940px) {
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    color: aliceblue;
-    font-size: xx-large;
-  }
-
-  .navbar {
-    padding: 1rem 2rem;
-  }
-
-  ul {
+  .nav-links {
     display: none;
   }
 }
