@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "poppins";
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #323232;
 }
 
 .navbar {
@@ -18,7 +23,7 @@
   position: fixed;
   z-index: 99999;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s cubic-bezier(.25, .8, .25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   opacity: 96%;
 }
 
@@ -28,7 +33,6 @@
   gap: 9rem;
   font-size: 1.3em;
   font-weight: 500;
-
 }
 
 .nav-links li a {
@@ -71,7 +75,7 @@
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .burger span:nth-of-type(1) {
@@ -91,18 +95,18 @@
   transform: translateY(-100%);
 }
 
-.burger input:checked~span:nth-of-type(1) {
+.burger input:checked ~ span:nth-of-type(1) {
   transform: rotate(45deg);
   top: 0px;
   left: 5px;
 }
 
-.burger input:checked~span:nth-of-type(2) {
+.burger input:checked ~ span:nth-of-type(2) {
   width: 0%;
   opacity: 0;
 }
 
-.burger input:checked~span:nth-of-type(3) {
+.burger input:checked ~ span:nth-of-type(3) {
   transform: rotate(-45deg);
   top: 28px;
   left: 5px;
@@ -116,7 +120,6 @@
 }
 
 .hero-container {
-  background-color: #323232;
   height: fit-content;
   position: relative;
   display: flex;
@@ -141,18 +144,135 @@
   margin-bottom: 0.5rem;
 }
 
-img {
-  width: 300px;
+.container .title {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 1em auto;
+  text-align: center;
 }
 
 .list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 20px;
+  justify-items: center;
+  margin-bottom: 2rem;
 }
 
 .card {
-  border: 1px solid black;
+  width: 400px;
+  height: 500px;
+  background-image: linear-gradient(163deg, #ff9913 0%, #ff0000 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 400px;
+  height: 500px;
+  background-color: #091523;
+  border-radius: 20px;
+  transition: all 0.2s;
+  color: white;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px #bf7009;
+}
+
+.image {
+  width: 300px;
+  margin-bottom: 0.2em;
+  border-radius: 20px;
+  height: 180px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.image:hover {
+  box-shadow: 0px 0px 30px 1px #bf7009;
+  transform: scale(1.1);
+}
+
+.name {
+  font-size: 1.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2rem;
+  color: #fd5e4c;
+}
+
+.city {
+  margin-bottom: 0.2em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.description {
+  margin: 1em 1em;
+  max-height: 150px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 500;
+  overflow-y: auto;
+  text-align: left;
+  transition: all 0.3s;
+  padding-right: 7px;
+}
+
+.description::-webkit-scrollbar {
+  width: 6px;
+  overflow: hidden;
+}
+
+.description::-webkit-scrollbar-thumb {
+  background-color: #fb412c;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.description::-webkit-scrollbar-track {
+  background-color: #650d04;
+  border-radius: 10px;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.description:hover::-webkit-scrollbar,
+.description:hover::-webkit-scrollbar-thumb,
+.description:hover::-webkit-scrollbar-track {
+  display: block;
+}
+
+.rating {
+  margin-top: 0.2em;
+}
+
+footer {
+  background-color: #091523;
+  color: white;
+  text-align: center;
+  padding: 0.1em;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
