@@ -7,30 +7,31 @@
     <link rel="icon" type="image/png" href="/images/logo/logo_trans.png" />
   </head>
   <body>
-    <a href="#list" class="skip-link">Skip Link</a>
-    <div class="nav-container">
+    <a tabindex="1" href="#list" class="skip-link">Skip Link</a>
+    <header class="nav-container">
       <nav class="navbar">
         <img
-          tabindex="-1"
           src="/images/logo/logo_trans.png"
           alt="Logo Steak Angkringan"
           class="logo"
         />
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Favorite</a></li>
+          <li><a tabindex="3" href="index.html">Home</a></li>
+          <li><a tabindex="4" href="#">Favorite</a></li>
           <li>
-            <a href="https://github.com/skr-g16" target="_blank">About Us</a>
+            <a tabindex="5" href="https://github.com/skr-g16" target="_blank"
+              >About Us</a
+            >
           </li>
         </ul>
-        <label class="burger" for="burger">
+        <label class="burger" for="burger" tabindex="2">
           <input type="checkbox" id="burger" />
           <span></span>
           <span></span>
           <span></span>
         </label>
       </nav>
-    </div>
+    </header>
 
     <main>
       <div class="hero-container">

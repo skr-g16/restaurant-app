@@ -4,8 +4,11 @@ import "../styles/responsive.css";
 import renderData from "./render-data.js";
 import dataRestaurant from "../public/data/DATA.json";
 import toggleBurger from "./toggle-burger.js";
+import burgerAcces from "./burger-acces.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
+  event.preventDefault();
   toggleBurger();
   renderData(dataRestaurant);
+  burgerAcces();
 });
