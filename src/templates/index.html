@@ -7,9 +7,11 @@
     <link rel="icon" type="image/png" href="/images/logo/logo_trans.png" />
   </head>
   <body>
+    <a href="#list" class="skip-link">Skip Link</a>
     <div class="nav-container">
       <nav class="navbar">
         <img
+          tabindex="-1"
           src="/images/logo/logo_trans.png"
           alt="Logo Steak Angkringan"
           class="logo"
@@ -34,12 +36,12 @@
       <div class="hero-container">
         <img src="./images/heros/hero-image_1.jpg" alt="" class="hero-image" />
         <div class="hero-content">
-          <h2>Steak Angkringan</h2>
-          <p>Pedagang Kaki Lima <br />Rasa Bintang Lima</p>
+          <h2 tabindex="0">Steak Angkringan</h2>
+          <p tabindex="0">Pedagang Kaki Lima <br />Rasa Bintang Lima</p>
         </div>
       </div>
       <div class="container">
-        <h3 class="title">List of Restaurant</h3>
+        <h3 id="list" tabindex="0" class="title">List of Restaurant</h3>
         <div class="list"></div>
       </div>
     </main>

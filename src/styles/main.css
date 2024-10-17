@@ -276,3 +276,19 @@ footer {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   width: 100%;
 }
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 1000000;
+  transition: top 0.3s;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
