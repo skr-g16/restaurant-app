@@ -79,20 +79,9 @@
 }
 
 @media screen and (max-width: 400px) {
-  .hero-container {
-    width: 100%;
-  }
 
   .list {
-    width: 100%;
-  }
-
-  .title {
-    width: 100%;
-  }
-
-  footer {
-    width: 100%;
+    grid-template-columns: 1fr;
   }
 
   .card {
