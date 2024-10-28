@@ -29,7 +29,6 @@
     gap: 3rem;
     font-size: 1.2em;
     transition: right 0.3s ease-in-out;
-
   }
 
   .nav-links.open {
@@ -81,7 +80,6 @@
 }
 
 @media screen and (max-width: 400px) {
-
   .list {
     grid-template-columns: 1fr;
   }
