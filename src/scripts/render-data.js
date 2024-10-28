@@ -1,6 +1,6 @@
 const renderData = (data) => {
-  const listOfRestaurant = document.querySelector(".list");
-  listOfRestaurant.innerHTML = "";
+  const listOfRestaurant = document.querySelector('.list');
+  listOfRestaurant.innerHTML = '';
   data.restaurants.forEach((restaurant) => {
     listOfRestaurant.innerHTML += `
       <div class="card" id="card-${restaurant.id}">

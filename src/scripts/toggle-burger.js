@@ -1,12 +1,12 @@
 function toggleBurger() {
-  const burger = document.getElementById("burger");
-  const navLinks = document.querySelector(".nav-links");
+  const burger = document.getElementById('burger');
+  const navLinks = document.querySelector('.nav-links');
 
-  burger.addEventListener("change", () => {
+  burger.addEventListener('change', () => {
     if (burger.checked) {
-      navLinks.classList.add("open");
+      navLinks.classList.add('open');
     } else {
-      navLinks.classList.remove("open");
+      navLinks.classList.remove('open');
     }
   });
 }
