@@ -8,29 +8,25 @@
     <link rel="icon" href="./images/logo/logo_trans.png" />
   </head>
   <body>
-    <a tabindex="0" href="#list" class="skip-link">Skip Link</a>
+    <a href="#list" class="skip-link">Skip Link</a>
     <header class="nav-container">
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <img
           src="./images/logo/logo_trans.png"
           alt="Logo Steak Angkringan"
           class="logo"
         />
-        <label class="burger" for="burger" tabindex="0">
+        <label class="burger" for="burger">
           <input type="checkbox" id="burger" />
           <span></span>
           <span></span>
           <span></span>
         </label>
         <ul class="nav-links">
-          <li><a tabindex="0" href="index.html">Home</a></li>
-          <li><a tabindex="0" href="#">Favorite</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Favorite</a></li>
           <li>
-            <a
-              tabindex="0"
-              href="https://github.com/skr-g16"
-              target="_blank"
-              rel="noopener"
+            <a href="https://github.com/skr-g16" target="_blank" rel="noopener"
               >About Us</a
             >
           </li>
@@ -46,10 +42,7 @@
           <p tabindex="0">Pedagang Kaki Lima <br />Rasa Bintang Lima</p>
         </div>
       </div>
-      <div class="container">
-        <h3 id="list" tabindex="0" class="title">List of Restaurant</h3>
-        <div class="list"></div>
-      </div>
+      <div id="container"></div>
     </main>
 
     <footer>

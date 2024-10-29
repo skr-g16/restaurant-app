@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "poppins";
+  font-family: 'poppins';
 }
 
 body {
@@ -58,7 +58,7 @@ body {
 
 .logo {
   width: 90px;
-  cursor: pointer;
+  user-select: none;
 }
 
 /* burger */
@@ -154,7 +154,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.container .title {
+#container .title {
   font-size: 2.5rem;
   color: white;
   font-weight: 700;
@@ -198,7 +198,6 @@ body {
 .card2:hover {
   transform: scale(0.98);
   border-radius: 20px;
-  cursor: pointer;
 }
 
 .card:hover {
@@ -207,16 +206,11 @@ body {
 
 .image {
   width: 300px;
-  margin-bottom: 0.2em;
+  margin-bottom: 1em;
   border-radius: 20px;
   height: 180px;
   object-fit: cover;
   transition: all 0.3s;
-}
-
-.image:hover {
-  box-shadow: 0px 0px 30px 1px #bf7009;
-  transform: scale(1.1);
 }
 
 .name {
@@ -225,6 +219,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0.2rem;
+  cursor: pointer;
+}
+
+.name a {
+  text-decoration: none;
   color: #fd5e4c;
 }
 
@@ -240,35 +239,14 @@ body {
   color: white;
   font-size: 1.2em;
   font-weight: 500;
-  overflow-y: auto;
+  overflow: hidden;
   text-align: left;
   transition: all 0.3s;
   padding-right: 7px;
-}
-
-.description::-webkit-scrollbar {
-  width: 6px;
-  overflow: hidden;
-}
-
-.description::-webkit-scrollbar-thumb {
-  background-color: #fb412c;
-  border-radius: 10px;
-  display: none;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-.description::-webkit-scrollbar-track {
-  background-color: #650d04;
-  border-radius: 10px;
-  display: none;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.description:hover::-webkit-scrollbar,
-.description:hover::-webkit-scrollbar-thumb,
-.description:hover::-webkit-scrollbar-track {
-  display: block;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .rating {

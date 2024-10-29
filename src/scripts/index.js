@@ -1,14 +1,21 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
 import '../styles/main.scss';
 import '../styles/responsive.scss';
-import renderData from './render-data.js';
-import dataRestaurant from '../public/data/DATA.json';
-import toggleBurger from './toggle-burger.js';
-import burgerAcces from './burger-acces.js';
+// import renderData from './utils/render-data.js';
+// import dataRestaurant from '../public/data/DATA.json';
+// import toggleBurger from './utils/toggle-burger.js';
+// import burgerAcces from './utils/burger-acces.js';
+import App from './views/app';
+const app = new App({
+  button: document.querySelector('.burger'),
+  drawer: document.querySelector('.nav-links'),
+  content: document.querySelector('#container'),
+  burgerBox: document.querySelector('#burger'),
+});
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  event.preventDefault();
-  toggleBurger();
-  renderData(dataRestaurant);
-  burgerAcces();
+window.addEventListener('load', () => {
+  app.renderPage();
 });
