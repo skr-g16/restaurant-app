@@ -1,6 +1,7 @@
 import 'regenerator-runtime';
 import '../styles/main.scss';
 import '../styles/responsive.scss';
+import './components/index.js';
 // import renderData from './utils/render-data.js';
 // import dataRestaurant from '../public/data/DATA.json';
 // import toggleBurger from './utils/toggle-burger.js';

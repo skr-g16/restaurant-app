@@ -9,44 +9,13 @@
   </head>
   <body>
     <a href="#list" class="skip-link">Skip Link</a>
-    <header class="nav-container">
-      <nav class="navbar" id="navbar">
-        <img
-          src="./images/logo/logo_trans.png"
-          alt="Logo Steak Angkringan"
-          class="logo"
-        />
-        <label class="burger" for="burger">
-          <input type="checkbox" id="burger" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Favorite</a></li>
-          <li>
-            <a href="https://github.com/skr-g16" target="_blank" rel="noopener"
-              >About Us</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <navbar-component></navbar-component>
 
     <main>
-      <div class="hero-container">
-        <img src="./images/heros/hero-image_1.jpg" alt="" class="hero-image" />
-        <div class="hero-content">
-          <h2 tabindex="0">Steak Angkringan</h2>
-          <p tabindex="0">Pedagang Kaki Lima <br />Rasa Bintang Lima</p>
-        </div>
-      </div>
+      <hero-container></hero-container>
       <div id="container"></div>
     </main>
 
-    <footer>
-      <p>&copy; 2022 Steak Angkringan. All rights reserved.</p>
-    </footer>
+    <footer-component></footer-component>
   </body>
 </html>

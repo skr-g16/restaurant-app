@@ -46,6 +46,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  #container .title {
+    font-size: 1.5em;
+  }
   .navbar {
     height: 70px;
   }
@@ -80,6 +83,9 @@
 }
 
 @media screen and (max-width: 400px) {
+  #container .title {
+    font-size: 1em;
+  }
   .list {
     grid-template-columns: 1fr;
   }
