@@ -46,6 +46,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .hero-image {
+    margin-top: 4em;
+  }
   #container .title {
     font-size: 1.5em;
   }

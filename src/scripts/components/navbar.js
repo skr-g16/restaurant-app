@@ -12,7 +12,7 @@ class navbar extends HTMLElement {
           alt="Logo Steak Angkringan"
           class="logo"
         />
-        <label class="burger" for="burger">
+        <label tabindex="0" class="burger" for="burger">
           <input type="checkbox" id="burger" />
           <span></span>
           <span></span>
