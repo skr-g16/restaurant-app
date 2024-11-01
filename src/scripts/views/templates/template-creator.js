@@ -62,11 +62,15 @@ const createRestoItem = (resto) => `
 `;
 
 const createFavoriteButton = (id) => `
-  <button aria-label="favorite this resto" id="favoriteButton" class="favorite-button" data-id="${id}"> 
+  <button aria-label="like this movie" id="favoriteButton" class="favorite">
+    <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
   `;
 
 const createUnfavoriteButton = (id) => `
-  <button aria-label="unfavorite this resto" id="unfavoriteButton" class="unfavorite-button" data-id="${id}"> 
+  <button aria-label="unlike this movie" id="favoriteButton" class="favorite">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
   `;
 
 export {

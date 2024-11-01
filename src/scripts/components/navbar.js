@@ -20,7 +20,7 @@ class navbar extends HTMLElement {
         </label>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">Favorite</a></li>
+          <li><a href="#/favorite">Favorite</a></li>
           <li>
             <a href="https://github.com/skr-g16" target="_blank" rel="noopener"
               >About Us</a
