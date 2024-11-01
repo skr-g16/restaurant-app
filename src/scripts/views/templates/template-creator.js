@@ -30,14 +30,14 @@ const createRestoDetail = (resto) => `
     <h3 tabindex="0">Reviews</h3>
     <ul class="reviews">
         ${resto.customerReviews
-          .map(
-            (review) => `
+    .map(
+      (review) => `
         <div class="reviews-item">
         <h4 tabindex="0">${review.name}</h4> 
         <p tabindex="0" class="review-text">${review.review}</p>
         <p tabindex="0" class="review-date">${review.date}</p></div>`,
-          )
-          .join('')}
+    )
+    .join('')}
     </ul>
     </div>
   </div>
@@ -61,13 +61,13 @@ const createRestoItem = (resto) => `
       </div>
 `;
 
-const createFavoriteButton = (id) => `
+const createFavoriteButton = () => `
   <button aria-label="like this movie" id="favoriteButton" class="favorite">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
   `;
 
-const createUnfavoriteButton = (id) => `
+const createUnfavoriteButton = () => `
   <button aria-label="unlike this movie" id="favoriteButton" class="favorite">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>

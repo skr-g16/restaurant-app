@@ -1,8 +1,5 @@
 import RestaurantDbSource from '../../data/restaurantdb-source';
-import {
-  createRestoDetail,
-  createFavoriteButton,
-} from '../templates/template-creator';
+import { createRestoDetail } from '../templates/template-creator';
 import urlParser from '../../routes/url-parser';
 import favoriteButtonInitiator from '../../utils/favorite-button-initiator';
 

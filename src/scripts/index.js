@@ -3,6 +3,7 @@ import '../styles/main.scss';
 import '../styles/responsive.scss';
 import './components/index.js';
 import App from './views/app';
+import swRegister from './utils/sw-register.js';
 const app = new App({
   button: document.querySelector('.burger'),
   drawer: document.querySelector('.nav-links'),
@@ -15,4 +16,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
