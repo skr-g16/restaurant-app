@@ -11,6 +11,16 @@ class App {
     this._initialAppShell();
   }
 
+  skipContent() {
+    const skipLink = document.querySelector('.skip-link');
+    const content = document.querySelector('#container');
+    skipLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      content.scrollIntoView({ behavior: 'smooth' });
+      skipLink.blur();
+    });
+  }
+
   _initialAppShell() {
     burgerInitiator.init({
       button: this._button,
@@ -24,6 +34,7 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+    this.skipContent();
   }
 }
 

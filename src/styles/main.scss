@@ -228,6 +228,10 @@ main {
 }
 
 .name {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 44px;
   font-size: 1.1em;
   font-weight: 700;
   text-transform: uppercase;
@@ -236,6 +240,11 @@ main {
   cursor: pointer;
   text-decoration: none;
   color: #fd5e4c;
+  transition: all 0.3s;
+}
+.name:hover {
+  text-decoration: underline;
+  color: #f23b26;
 }
 
 .city {
@@ -580,6 +589,8 @@ footer {
 }
 
 #review-form button {
+  min-height: 44px;
+  min-width: 54px;
   margin: 0.5em auto;
   width: fit-content;
   padding: 0.5em 1em;
@@ -594,6 +605,8 @@ footer {
 }
 
 .input {
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 20px;
   padding: 0.5em 1em;
   font-size: 1em;
