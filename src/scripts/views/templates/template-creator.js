@@ -24,10 +24,8 @@ const createRestoDetail = (resto) => `
     <ul>
       ${resto.menus.drinks.map((drink) => `<li tabindex="0">${drink.name}</li>`).join('')}
     </ul></div>
-
-
     <div class="customer-reviews">
-    <h3 tabindex="0">Reviews</h3>
+    <h3 tabindex="0">Customer Reviews</h3>
     <ul class="reviews">
         ${resto.customerReviews
     .map(
@@ -40,6 +38,9 @@ const createRestoDetail = (resto) => `
     .join('')}
     </ul>
     </div>
+  </div>
+  <div class="card-reviews">
+    <form-review></form-review>
   </div>
 
 
