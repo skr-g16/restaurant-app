@@ -5,8 +5,22 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .card-detail {
+    display: block;
+  }
+  .description-detail {
+    margin-bottom: 1em;
+  }
+  .image-detail {
+    display: block;
+    width: -webkit-fill-available;
+    height: auto;
+  }
+}
+
 /* mobile */
-@media screen and (max-width: 865px) {
+@media screen and (max-width: 945px) {
   .navbar {
     padding: 3em;
   }
@@ -42,6 +56,9 @@
 
   .hero-content p {
     font-size: 1rem;
+  }
+  .card-reviews {
+    width: 100%;
   }
 }
 
@@ -83,10 +100,48 @@
   .navbar {
     padding: 0 1em;
   }
+  .image-detail {
+    margin-bottom: 0.5em;
+  }
+  .card-detail {
+    margin: 6em auto 0;
+    padding: 1em;
+  }
+  .card-detail-info {
+    font-size: 0.8em;
+  }
+  .description-detail {
+    font-size: 0.7em;
+  }
+  .customer-reviews {
+    font-size: 0.6em;
+  }
+  #review-form {
+    font-size: 0.6em;
+  }
+  .menu-foods ul {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  .menu-foods ul li {
+    font-size: 0.5em;
+    min-width: 80px;
+  }
+
+  .menu-drinks ul {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  .menu-drinks ul li {
+    font-size: 0.5em;
+    min-width: 80px;
+    margin-bottom: 1em;
+  }
 }
 
 @media screen and (max-width: 400px) {
   #container .title {
+    font-size: 1em;
+  }
+  .card-detail-name {
     font-size: 1em;
   }
   .list {
@@ -107,6 +162,9 @@
   }
 
   footer {
-    font-size: smaller;
+    font-size: 0.7em;
+  }
+  .nav-links {
+    width: 70%;
   }
 }

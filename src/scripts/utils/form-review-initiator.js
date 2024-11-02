@@ -15,6 +15,7 @@ const formReviewInitiator = async () => {
     const review = reviewInput.value.trim();
     await RestaurantDbSource.postReview(id, name, review);
     form.reset();
+    window.location.reload();
   });
 };
 

@@ -42,7 +42,7 @@ module.exports = {
       runtimeCaching: [
         {
           urlPattern: new RegExp('https://restaurant-api.dicoding.dev/'),
-          handler: 'StaleWhileRevalidate',
+          handler: 'NetworkFirst',
           options: {
             cacheName: 'api-cache',
           },
