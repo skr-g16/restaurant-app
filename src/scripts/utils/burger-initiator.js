@@ -5,7 +5,7 @@ const burgerInitiator = {
       this._toggleDrawer(event, drawer, burgerBox);
     });
 
-    burgerBox.addEventListener('keydown', (event) => {
+    button.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
         this._toggleDrawer(event, drawer, burgerBox);
@@ -14,11 +14,13 @@ const burgerInitiator = {
 
     content.addEventListener('click', (event) => {
       this._closeDrawer(event, drawer);
+      burgerBox.checked = false;
     });
   },
 
   _toggleDrawer(event, drawer, burgerBox) {
     event.stopPropagation();
+    burgerBox.checked = !burgerBox.checked;
     drawer.classList.toggle('open', burgerBox.checked);
   },
 

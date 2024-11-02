@@ -70,6 +70,7 @@ main {
 
 /* burger */
 .burger {
+  user-select: none;
   position: relative;
   width: 44px;
   height: 44px;
