@@ -7,11 +7,10 @@ class navbar extends HTMLElement {
     this.innerHTML = `
     <header class="nav-container">
       <nav class="navbar" id="navbar">
-        <img
-          src="./images/logo/logo_trans.png"
-          alt="Logo Steak Angkringan"
-          class="logo"
-        />
+        <picture>
+          <source type="image/webp" media="(max-width: 600px)" srcset="./images/logo/logo_trans-small.webp">
+          <img src="./images/logo/logo_trans-large.webp" type="image/webp" alt="Logo Steak Angkringan" class="logo"/>
+        </picture>
         <label tabindex="0" class="burger" for="burger">
           <input type="checkbox" id="burger" />
           <span></span>
