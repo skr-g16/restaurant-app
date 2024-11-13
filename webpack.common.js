@@ -7,6 +7,8 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CompressionPlugin = require('compression-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -40,8 +42,10 @@ module.exports = {
       automaticNameDelimiter: '~',
       enforceSizeThreshold: 50000,
       cacheGroups: {
-        defaultVendors: {
+        Vendor: {
           test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
           priority: -10,
         },
         default: {
@@ -51,6 +55,7 @@ module.exports = {
         },
       },
     },
+    minimizer: [new CssMinimizerPlugin()],
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -114,6 +119,7 @@ module.exports = {
       ],
       overrideExtension: true,
     }),
+    new CompressionPlugin(),
     new BundleAnalyzerPlugin(),
   ],
 };
