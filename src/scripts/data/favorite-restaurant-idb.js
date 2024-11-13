@@ -1,5 +1,10 @@
 /* eslint-disable no-prototype-builtins */
 import { openDB } from 'idb';
+import {
+  startLoadingAnimation,
+  stopLoadingAnimation,
+  showErrorFeedback,
+} from '../utils/anime-js-loading';
 import CONFIG from '../global/config';
 
 const { DATABASE_NAME, DATABASE_VERSION, OBJECT_STORE_NAME } = CONFIG;
@@ -11,11 +16,20 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 
 const favoriteRestaurantIdb = {
   async getRestaurant(id) {
-    if (!id) return;
     return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
   async getAllRestaurants() {
-    return (await dbPromise).getAll(OBJECT_STORE_NAME);
+    try {
+      startLoadingAnimation();
+      return (await dbPromise).getAll(OBJECT_STORE_NAME);
+    } catch (error) {
+      showErrorFeedback(
+        'Error loading favorite restaurants. Please try again.',
+      );
+      throw error;
+    } finally {
+      stopLoadingAnimation();
+    }
   },
   async putRestaurant(restaurant) {
     if (!restaurant.hasOwnProperty('id')) {
