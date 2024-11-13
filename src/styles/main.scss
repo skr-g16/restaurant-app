@@ -302,6 +302,13 @@ footer {
 .skip-link:focus {
   top: 0;
 }
+
+.list h3 {
+  margin-top: 3em;
+  color: #bf1722;
+  font-weight: 500;
+  font-style: italic;
+}
 .detail {
   display: flex;
   flex-direction: column;
