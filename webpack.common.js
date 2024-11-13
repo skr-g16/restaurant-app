@@ -8,6 +8,7 @@ const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -119,5 +120,6 @@ module.exports = {
       overrideExtension: true,
     }),
     new CompressionPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
 };

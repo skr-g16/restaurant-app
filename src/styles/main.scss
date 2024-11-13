@@ -326,9 +326,6 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-gap: 1.3em;
 }
-.card-detail picture {
-  display: grid;
-}
 
 .card-detail-name {
   text-align: center;
@@ -338,11 +335,13 @@ footer {
   font-weight: 700;
   color: #f23b26;
 }
+.image-detail-container {
+  grid-row: 2/4;
+}
 
 .image-detail {
   margin: 1em;
   justify-self: center;
-  grid-row: 2/4;
   border-radius: 20px;
   height: 400px;
   object-fit: cover;

@@ -10,7 +10,6 @@ const swRegister = async () => {
 
   try {
     await wb.register();
-    console.log('SW registered');
   } catch (error) {
     console.log('SW registration failed', error);
   }

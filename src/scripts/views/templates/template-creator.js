@@ -5,8 +5,8 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 const createRestoDetail = (resto) => `
   <div class="card-detail">
   <h2 tabindex="0" class="card-detail-name">${resto.name}</h2>
-  <picture class="image-detail">
-    <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_SMALL_URL + resto.pictureId}">
+  <picture class="image-detail-container">
+    <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_SMALL_URL + resto.pictureId}">
     <img class="image-detail lazyload" data-src="${CONFIG.BASE_IMAGE_MEDIUM_URL + resto.pictureId}" alt="${resto.name}">
   </picture>
   <div class="card-detail-info">
