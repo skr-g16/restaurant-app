@@ -65,6 +65,7 @@ main {
 
 .logo {
   width: 90px;
+  height: 66px;
   user-select: none;
 }
 
@@ -301,6 +302,13 @@ footer {
 .skip-link:focus {
   top: 0;
 }
+
+.list h3 {
+  margin-top: 3em;
+  color: #bf1722;
+  font-weight: 500;
+  font-style: italic;
+}
 .detail {
   display: flex;
   flex-direction: column;
@@ -317,6 +325,9 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1.3em;
+}
+.card-detail picture {
+  display: grid;
 }
 
 .card-detail-name {

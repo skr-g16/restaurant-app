@@ -1,9 +1,14 @@
 import CONFIG from '../../global/config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createRestoDetail = (resto) => `
   <div class="card-detail">
   <h2 tabindex="0" class="card-detail-name">${resto.name}</h2>
-  <img class="image-detail" src="${CONFIG.BASE_IMAGE_MEDIUM_URL + resto.pictureId}" alt="${resto.name}">
+  <picture class="image-detail">
+    <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_SMALL_URL + resto.pictureId}">
+    <img class="image-detail lazyload" data-src="${CONFIG.BASE_IMAGE_MEDIUM_URL + resto.pictureId}" alt="${resto.name}">
+  </picture>
   <div class="card-detail-info">
     <h3 tabindex="0">Location</h3>
     <p tabindex="0">${resto.address}, ${resto.city}</p>
@@ -50,7 +55,11 @@ const createRestoItem = (resto) => `
 <div class="card" id="card-${resto.id}">
         <div class="card2">
           <div class="card-image">
-            <img tabindex="0" class="image" src="${CONFIG.BASE_IMAGE_SMALL_URL + resto.pictureId}" alt="${resto.name}">
+            <picture class="image">
+              <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_SMALL_URL + resto.pictureId}">
+              <img tabindex="0" class="image lazyload" data-src="${CONFIG.BASE_IMAGE_MEDIUM_URL + resto.pictureId}" alt="${resto.name}">
+            </picture>
+
           </div>
           <div class="card-content">
             <a class="name" href="/#/detail/${resto.id}">${resto.name}</a>
@@ -63,13 +72,13 @@ const createRestoItem = (resto) => `
 `;
 
 const createFavoriteButton = () => `
-  <button aria-label="like this movie" id="favoriteButton" class="favorite">
+  <button aria-label="like this resto" id="favoriteButton" class="favorite">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
   `;
 
 const createUnfavoriteButton = () => `
-  <button aria-label="unlike this movie" id="favoriteButton" class="favorite">
+  <button aria-label="unlike this resto" id="favoriteButton" class="favorite">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
   `;

@@ -1,3 +1,9 @@
+.vscode
+.env
+.test.env
+
 node_modules
 dist
 restaurant-app.zip
+e2e/output
+package-lock.json
