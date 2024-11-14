@@ -1,5 +1,6 @@
 import favoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import { createRestoItem } from '../templates/template-creator';
+import { stopLoadingAnimation } from '../../utils/anime-js-loading';
 
 const favorite = {
   async render() {
@@ -25,6 +26,7 @@ const favorite = {
         listContainer.innerHTML += createRestoItem(resto);
       });
     }
+    stopLoadingAnimation();
   },
 };
 
